@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="css/base.css" type="text/css" media="screen" />
+  <link rel="stylesheet" id="current-theme" href="css/basic/style.css" type="text/css" media="screen" />  
+	<script src="js/jquery.min.js"></script>
+   <script src="js/edit.js"></script>
+  <!--<script src="js/edit.js"></script>-->
+  <script>
+  $('document').ready(function(){
+		var url=window.location.href;
+		var a=url.split("=");
+		var id=a[a.length-1];
+		$("#group").load('edit.php?id='+id);
+  });
+  </script> 
+
+</head>
+<body>
+   <div id="container">
+    <div id="header">
+      <h1><a href="index.html">Guestbook</a></h1>
+      <div id="user-navigation">
+        <ul class="wat-cf">
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="change_password.html">Change Password</a></li>
+          <li><a class="logout" href="logout.php">Logout</a></li>
+        </ul>
+      </div>
+      <div id="main-navigation">
+        <ul class="wat-cf">
+          <li class="first"><a href="dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="guests.html">Guests</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper" class="wat-cf">
+      <div id="main">
+
+        
+
+        <div class="block" id="block-forms">
+          <div class="secondary-navigation"></div>
+          <div class="content">
+          <div class="flash">
+            <div class="message notice">
+              <p></p>
+            </div>
+          </div>
+            <h2 class="title">Edit Guest</h2>
+            <div class="inner">
+            <div id='group'></div>
+              <!--<form action="" method="" class="form">
+                <div class="group">
+                  <label class="label">Name<span class="mandatory">*</span></label>
+		 
+                  <input type="text" class="text_field" name="name" id="name" />
+                  <span class="description">Ex: a simple text</span>
+		  <div class="error" id="errorname" style="display:none">Please enter name.</div>
+                </div>
+                <div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Email Id</label>                    
+                  </div>
+                  <input type="text" class="text_field" name="email"  id="email"/>
+                  <span class="description">Ex: a simple text</span>
+                  <div class="error" id="erroremail" style="display:none"></div>
+                </div>
+                <div class="group">
+                  <label class="label">Address</label>
+                  <textarea class="text_area" name="address" id="address" rows="5" cols="80"></textarea>
+                  <span class="description">Write here a long text</span>
+                  <div class="error" id="erroradd" style="display:none"></div>
+                </div>
+		<div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Phone No.</label>                    
+                  </div>
+                  <input type="text" class="text_field" id="phone"/>
+                  <span class="description">Ex: a simple text</span>
+                  <div class="error" id="errorphone" style="display:none"></div>
+                </div>
+		<div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Gender</label>                    
+                  </div>
+		  <div>
+		          <input type="radio" class="text_field" name="gender" id="genderm" value="M" />
+		          <label class="radio">Male</label>&nbsp;
+			  <input type="radio" class="text_field" name="gender" id="genderf" value="F" />
+		          <label class="radio">Female</label>
+                  <div class="error" id="errorgender" style="display:none"></div>
+		  </div>	
+                </div>
+		<div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Avatar</label>                    
+                  </div>
+                  <input type="file" class="text_field" id="photo" />
+                  <span class="description">jpeg or png</span>
+                  <div class="error" id="errorphoto" style="display:none"></div>
+                </div>
+		<div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Hobbies</label>                    
+                  </div>
+                   <div>
+		          <input type="checkbox" class="text_field"  id="hobb1" value="R"  />
+		          <label class="checkbox">Reading Books</label>&nbsp;
+			  <input type="checkbox" class="text_field"  id="hobb2" value="L" />
+		          <label class="checkbox">Listening to Music</label>
+                  <div class="error" id="errorhobb" style="display:none"></div>
+		  </div>
+                </div>
+                <div class="group navform wat-cf">
+                  <button class="button" type="button" name="submit" id="submit">
+                    <img src="images/icons/tick.png" alt="" /> Save
+                  </button>
+                  <span class="text_button_padding">or</span>
+                  <a class="text_button_padding link_button" href="#header">Cancel</a>
+                </div>
+              </form>-->
+            </div>
+          </div>
+        </div>
+       
+
+       
+        <div id="footer">
+          <div class="block">
+            <p>Copyright &copy; 2010 Your Site.</p>
+          </div>
+        </div>
+      </div>
+      
+     <div id="sidebar">       
+        <div class="block notice">
+          <h4>Notice Title</h4>
+          <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
+        </div>        
+      </div>
+
+    </div>
+    
+  </div>
+
+</body>
+</html>
+

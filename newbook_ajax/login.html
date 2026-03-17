@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="css/base.css" type="text/css" media="screen" />
+  <link rel="stylesheet" id="current-theme" href="css/basic/style.css" type="text/css" media="screen" />
+   <script src="js/jquery.min.js"></script>
+  <script src="js/login.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1><a href="index.html">Guestbook</a></h1>
+      
+      
+    </div>
+    <div id="wrapper" class="wat-cf">
+      
+      
+    <div id="box">
+     
+      <div class="block" id="block-login">
+        <h2>Login</h2>
+        <div class="content login">
+          <div class="flash">
+            <div class="message notice">
+              <p id="msg"></p>
+            </div>
+          </div>
+          <form action="" class="form login" method="post" enctype="multipart/form-data">
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label right">Email Address</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text_field" name="email_address" id="email" />
+				<div class="error" id="erroremail" style="display:none"></div>
+              </div>
+            </div>
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label right">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text_field" name="password" id="password"/>
+				<div class="error" id="errorpass" style="display:none"></div>
+              </div>
+            </div>
+            <div class="group navform wat-cf">
+              <div class="right">
+                <button class="button" type="button" name="submit" id="submit">
+                  <img src="images/icons/key.png" alt="Save" /> Login
+                </button>
+		<span class="text_button_padding">or</span>
+                  <a class="text_button_padding link_button" href="signup.html">Create an account</a>
+		
+                  
+              </div>
+            </div>
+	    
+          </form>
+	  <div class="group navform wat-cf">
+              <div class="right">
+                
+		<span class="text_button_padding">If you forgot the password. Please click on <a class="text_button_padding link_button" style="float:right;padding-top:0px;" href="forgot_password.html">Forgot Password</a></span>
+                  
+              </div>
+            </div>
+        </div>
+      </div>
+
+     
+    </div>
+  </div>
+
+</body>
+</html>
+

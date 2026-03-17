@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Guestbook</title>
+  <link rel="stylesheet" href="css/base.css" type="text/css" media="screen" />
+  <link rel="stylesheet" id="current-theme" href="css/basic/style.css" type="text/css" media="screen" />  
+  <script src="js/jquery.min.js"></script>
+  
+  <script>
+  $('document').ready(function(){
+  //alert ('hi');
+   var url = window.location.href;
+  var a = url.split("=");
+  var id= a[a.length-1];
+  $("#datas2").load("view.php?id="+id);
+   //alert(id);
+  });
+  </script>
+</head>
+<body>
+   <div id="container">
+    <div id="header">
+      <h1><a href="showguest.php">Guestbook</a></h1>
+      <div id="user-navigation">
+        <ul class="wat-cf">
+          <li><a href="profile.php">Profile</a></li>
+          <li><a href="change_password.html">Change Password</a></li>
+          <li><a class="logout" href="logout.php" onclick="window.location='logout.php';">Logout</a></li>
+        </ul>
+      </div>
+      <div id="main-navigation">
+        <ul class="wat-cf">
+          <li class="first"><a href="dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="guests.html" >Guests</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper" class="wat-cf">
+      <div id="main">
+	      <div class="block" id="block-tables">
+          <div class="secondary-navigation"></div>
+          <div class="content">
+            <h2 class="title">Show</h2>
+	    <div class="actions-bar wat-cf">
+                  <div class="actions" style="float:right;padding-right:5px;">
+                    
+                  </div>
+            </div>
+
+            <div class="inner">
+			<div id="datas2"></div>
+             
+                <div class="actions-bar wat-cf">
+                  <div class="actions">
+                    
+                  </div>
+                  <div class="pagination">
+                    <a rel="next" class="next_page" href="guests.html">Back</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+         <div id="footer">
+          <div class="block">
+            <p>Copyright &copy; 2010 Your Site.</p>
+          </div>
+        </div>
+      </div>
+      
+     <div id="sidebar">       
+        <div class="block notice">
+          <h4>Notice Title</h4>
+          <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
+        </div>        
+      </div>
+
+    </div>
+    
+  </div>
+
+</body>
+</html>
+
